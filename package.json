@@ -1,0 +1,22 @@
+{
+  "name": "wallpaper-china",
+  "version": "0.0.1",
+  "description": "bing wallpaper china version gallery",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "tsc && node lib/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
+  "repository": "https://github.com/bing-wallpapers/wallpaper-china.git",
+  "author": "孟世博 <897205285@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^18.7.11",
+    "node-fetch": "2.6.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "typescript": "^4.7.4"
+  }
+}
