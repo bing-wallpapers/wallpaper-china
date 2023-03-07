@@ -2,22 +2,19 @@ name: Bing_Wallpaper_Download
 
 on:
   schedule:
-    - cron: "1 16 * * *" # 每天在北京时间0点1分执行
+    - cron: "1 1 * * *"
   workflow_dispatch:
 
 jobs:
   play:
     runs-on: ubuntu-latest
-    container:
-      image: docker://ubuntu:20.04
-      options: --env TZ=Asia/Shanghai # 设置容器时区为北京时间
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Install dependencies
+          registry-url: https://npm.pkg.github.com/
+      - name: Npm install
         run: npm install
       - name: Run Project
         run: npm run start
