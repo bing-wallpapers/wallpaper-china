@@ -2,7 +2,7 @@ name: Bing_Wallpaper_Download
 
 on:
   schedule:
-    - cron: "1 0 * * *"
+    - cron: "1 16 * * *" # 每天北京时间凌晨0点1分执行 (UTC 时间下午 4 点 1 分)
   workflow_dispatch:
 
 jobs:
