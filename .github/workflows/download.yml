@@ -2,13 +2,13 @@ name: Bing_Wallpaper_Download
 
 on:
   schedule:
-    - cron: "1 16 * * *" # 每天北京时间凌晨0点1分执行 (UTC 时间下午 4 点 1 分)
+    - cron: "1 16 * * *" # Every day at 00:01 AM Beijing Time (4:01 PM UTC)
   workflow_dispatch:
 
 jobs:
   play:
     runs-on: ubuntu-latest
-    env: # 设置整个 job 的环境变量
+    env:
       TZ: Asia/Shanghai
     steps:
       - uses: actions/checkout@v2
